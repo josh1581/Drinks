@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xBj-3k-1rE">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Drink Table View Controller-->
+        <scene sceneID="R4e-Yw-oIM">
+            <objects>
+                <tableViewController id="xBj-3k-1rE" customClass="DrinkTableViewController" customModule="Drink" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="D1q-FW-ktL">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <label key="tableHeaderView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Drinks That Start With A for $100" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="acE-5f-B5g">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="drinkCell" rowHeight="261" id="dhA-vw-TB4" customClass="DrinkTableViewCell" customModule="Drink" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="68.5" width="414" height="261"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dhA-vw-TB4" id="21y-rl-jXc">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="261"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="nobooze" translatesAutoresizingMaskIntoConstraints="NO" id="MaD-y1-qnw">
+                                            <rect key="frame" x="87" y="16" width="240" height="164"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(Drink)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iEp-Tm-X92">
+                                            <rect key="frame" x="36" y="196" width="342" height="30"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                            <color key="textColor" systemColor="systemBlueColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailingMargin" secondItem="iEp-Tm-X92" secondAttribute="trailing" constant="16" id="6nV-hp-Bp2"/>
+                                        <constraint firstItem="iEp-Tm-X92" firstAttribute="centerX" secondItem="21y-rl-jXc" secondAttribute="centerX" id="Ax4-UY-aub"/>
+                                        <constraint firstItem="MaD-y1-qnw" firstAttribute="width" secondItem="21y-rl-jXc" secondAttribute="width" multiplier="0.57971" id="CAY-3R-zjQ"/>
+                                        <constraint firstItem="MaD-y1-qnw" firstAttribute="top" secondItem="21y-rl-jXc" secondAttribute="top" constant="16" id="EzZ-pl-3eg"/>
+                                        <constraint firstItem="iEp-Tm-X92" firstAttribute="leading" secondItem="21y-rl-jXc" secondAttribute="leadingMargin" constant="16" id="HTO-vZ-2SB"/>
+                                        <constraint firstItem="MaD-y1-qnw" firstAttribute="centerX" secondItem="21y-rl-jXc" secondAttribute="centerX" id="MOK-O7-JOc"/>
+                                        <constraint firstItem="MaD-y1-qnw" firstAttribute="width" secondItem="21y-rl-jXc" secondAttribute="height" multiplier="80:87" id="VRh-9H-RGV"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="iEp-Tm-X92" secondAttribute="bottom" constant="24" id="YKp-As-rsK"/>
+                                        <constraint firstAttribute="bottom" secondItem="MaD-y1-qnw" secondAttribute="bottom" constant="16" id="dmo-xG-MwL"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="drinkImage" destination="MaD-y1-qnw" id="4Cr-aR-9Ia"/>
+                                    <outlet property="drinkName" destination="iEp-Tm-X92" id="nak-AT-GmA"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="xBj-3k-1rE" id="iaB-MW-ez3"/>
+                            <outlet property="delegate" destination="xBj-3k-1rE" id="V3b-Mh-UPA"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cw1-gX-2CC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-343.47826086956525" y="69.642857142857139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="nobooze" width="312" height="312"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
